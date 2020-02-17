@@ -1,15 +1,12 @@
 import React from "react";
 import "./App.css";
-import Sidebar from "./components/Sidebar";
-import Table from "./components/Table";
+import TableGrid from "./components/TableGrid";
+import ModalFilter from "./components/ModalFilter";
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
-      <div className="main">
-        <Table />
-      </div>
+    <div>
+      <TableGrid />
     </div>
   );
 }
