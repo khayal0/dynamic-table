@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../components/TableGrid.scss";
 import ModalFilter from "./ModalFilter";
 import { tableData } from "../utils/fakeData";

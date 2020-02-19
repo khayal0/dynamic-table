@@ -1,7 +1,6 @@
 .modal--filter {
   position: absolute;
   z-index: 1;
-  /* border: 1px solid rgba(128, 128, 128, 0.164); */
   box-shadow: 0px 1px 6px rgba(46, 40, 40, 0.144);
   margin-top: 76px;
   overflow: hidden;
@@ -23,8 +22,6 @@
   animation-name: modal--keyframes;
   animation-duration: 0.3s;
   background: rgb(255, 255, 255);
-  // height: 110px;
-  // width: 120px;
   margin: 0;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.65);
