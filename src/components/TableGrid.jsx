@@ -16,6 +16,7 @@ const { headers, data } = tableData;
 export default function FlexTable(props) {
   return (
     <div className="table--grid--container">
+      <div className="table--grid--headingtab"></div>
       <div className="table--grid">
         {headers.map((item, i) => (
           <span>{item}</span>
