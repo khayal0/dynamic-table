@@ -1,11 +1,12 @@
-$column-size: 11;
+$column-size: 12;
 $light-black: rgba(0, 0, 0, 0.65);
 $cyan: #1890ff;
+$light-gray: #d9d9d9;
 
 .table--grid--container {
   display: inline-flex;
   flex-flow: column wrap;
-  transition: all 0.3s;
+  transition: all 0.25s;
   margin: 200px;
 }
 
@@ -28,7 +29,7 @@ $cyan: #1890ff;
     transition: all 0.3s, border 0s;
     padding: 19px 15px;
     text-align: left;
-    border-bottom: 1px dashed #440c0c10;
+    border-bottom: 1px solid #440c0c10;
     color: rgba(0, 0, 0, 0.65);
   }
 
@@ -41,10 +42,12 @@ $cyan: #1890ff;
     padding-left: 15px;
     border-bottom: none;
   }
+  // icon and last
+  & span:nth-child(#{$column-size}) {
+    display: flex;
+    padding: 0 !important;
+  }
 
-  // & span:nth-child(#{$column-size}) {
-  //   display: flex;
-  // }
   & a {
     color: #62bfff;
     text-decoration: none;
@@ -60,7 +63,7 @@ $cyan: #1890ff;
   margin: 10px 0 0 0;
 }
 .pagination button {
-  border-color: #d9d9d9;
+  border: 1px solid $light-gray;
   border-radius: 4px;
   transition: all 0.3s;
   background-color: transparent;
@@ -74,12 +77,10 @@ $cyan: #1890ff;
 button.pageChangePagination {
   cursor: not-allowed;
   color: rgba(0, 0, 0, 0.25); /* disabled colour */
-  border: 1px solid #d9d9d9;
   font-size: 18px;
 }
 
 button.pageCountPagination {
-  border: 1px solid #d9d9d9;
   color: $cyan;
   border-color: $cyan;
 }
@@ -124,10 +125,4 @@ button.pageCountPagination:hover {
       content: "Waiting";
     }
   }
-}
-//status buttons end
-.flex--no--padding {
-  display: flex;
-  flex-direction: row;
-  padding: 0 !important;
 }
