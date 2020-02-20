@@ -2,14 +2,11 @@ export const tableData = {
   headers: [
     "Name",
     "Updated",
-    "Flex Id",
     " Company Id",
     "Created by",
     "Id",
     "Created date",
-    "Customer type",
     "Email",
-    "Tax Id",
     "Status"
   ],
   data: [
@@ -17,71 +14,51 @@ export const tableData = {
       "XIRDALAN İİT 2014 MMC",
       "23",
       "@testing",
-      "21",
       "fooBar",
       "23",
-      "align row and column width and height test test test test test test",
-      "Customer type",
+      "align row and column width and height test test test test",
       "@fooBar",
-      "@fooBar",
-      { status: "waiting" },
-      ""
+      "waiting"
     ],
     [
       "XIRDALAN İİT 2014 MMC",
       "23",
       "@testing",
-      "21",
       "fooBar",
       "23",
-      "align row and column width and height test test test test test test",
-      "Customer type",
+      "align row and column width and height test test test test",
       "@fooBar",
-      "@fooBar",
-      { status: "waiting" },
-      ""
+      "waiting"
     ],
     [
       "XIRDALAN İİT 2014 MMC",
       "23",
       "@testing",
-      "21",
       "fooBar",
       "23",
       "align ",
-      "Customer type",
       "@fooBar",
-      "@fooBar",
-      { status: "rejected" },
-      ""
+      "rejected"
     ],
     [
       "XIRDALAN İİT 2014 MMC",
       "23",
       "@testing",
-      "21",
       "fooBar",
       "23",
       "align",
-      "Customer type",
       "@fooBar",
-      "@fooBar",
-      { status: "" },
       ""
     ],
     [
       "XIRDALAN İİT 2014 MMC",
       "23",
       "@testing",
-      "21",
       "fooBar",
       "23",
       "align ",
-      "Customer type",
       "@fooBar",
-      "@fooBar",
-      { status: "success" },
-      ""
+      "success"
     ]
   ]
 };

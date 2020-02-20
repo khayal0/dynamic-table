@@ -16,40 +16,32 @@ const { headers, data } = tableData;
 export default function FlexTable(props) {
   return (
     <div className="table--grid--container">
-      <div className="table--grid--headingtab"></div>
-      <div className="table--grid">
-        {headers.map((item, i) => (
-          <span>{item}</span>
-        ))}
-        <span>
+      <div className="table--grid--head">
+        <div className="table--grid--head__title">
+          <span>Customer Reports</span>
+        </div>
+        <div className="table--grid--head__filter">
           <ModalFilter />
-        </span>
-        {data.map(items =>
-          items.map((item, i) => {
-            console.log(items.length, "and", i + 1);
-            return i === 10 ? (
-              <span
-                className={`.button--status__${item.status.toUpperCase()}`}
-              ></span>
-            ) : i === 0 ? (
-              <span>
-                <a href="google.com" alt="">
-                  {item}
-                </a>
-              </span>
-            ) : (
-              <span>{item}</span>
-            );
-          })
-        )}
+        </div>
       </div>
-      <div className="pagination">
-        <button className="pageChangePagination">&lt;</button>
-        <button className="pageCountPagination">1</button>
-        <button className="pageCountPagination">2</button>
-        <button className="pageCountPagination">3</button>
-        <button className="pageChangePagination">&gt;</button>
+      <div className="table--grid--body">
+        <div className="table--grid">
+          {headers.map(item => (
+            <span>{item}</span>
+          ))}
+          {data.map(items => items.map(item => <span>{item}</span>))}
+          {/* <div className="pagination">
+          <button className="pageChangePagination">&lt;</button>
+          <button className="pageCountPagination">1</button>
+          <button className="pageCountPagination">2</button>
+          <button className="pageCountPagination">3</button>
+          <button className="pageChangePagination">&gt;</button>
+        </div> */}
+        </div>
       </div>
     </div>
   );
 }
+/* <span
+className={`.button--status__${item.status.toUpperCase()}`}
+></span> */

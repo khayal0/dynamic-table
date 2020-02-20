@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../components/ModalFilter.scss";
 import { filterSvg } from "../assets/filterSvg";
+import { tableData } from "../utils/fakeData";
 
 export default function Modal() {
   const [show, setShow] = useState(false);
@@ -15,30 +16,16 @@ export default function Modal() {
       </span>
       {show ? (
         <div className="modal--filter">
-          <li>
-            <input id="1" type="checkbox" />
-            <label for="1">example select</label>
-          </li>
-          <li>
-            <input id="1" type="checkbox" />
-            <label for="1">example select</label>
-          </li>
-          <li>
-            <input id="1" type="checkbox" />
-            <label for="1">example select</label>
-          </li>
-          <li>
-            <input id="1" type="checkbox" />
-            <label for="1">example select</label>
-          </li>
-          <li>
-            <input id="1" type="checkbox" />
-            <label for="1">example select</label>
-          </li>
-          <li>
-            <input id="1" type="checkbox" />
-            <label for="1">example select</label>
-          </li>
+          {tableData.headers.map((item, i) => (
+            <li>
+              <label class="checkbox--styled">
+                <input id={i} type="checkbox" />
+                <span></span>
+              </label>
+              <label for={i}>{item}</label>
+              <pan></pan>
+            </li>
+          ))}
         </div>
       ) : null}
     </React.Fragment>

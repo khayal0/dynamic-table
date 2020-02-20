@@ -2,10 +2,10 @@
   position: absolute;
   z-index: 1;
   box-shadow: 0px 1px 6px rgba(46, 40, 40, 0.144);
-  margin-top: 76px;
   overflow: hidden;
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
+  margin-top: 43px;
 }
 
 @keyframes modal--keyframes {
@@ -21,49 +21,42 @@
 .modal--filter li {
   animation-name: modal--keyframes;
   animation-duration: 0.3s;
-  background: rgb(255, 255, 255);
   margin: 0;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.65);
   display: block;
-  padding: 10px;
+  padding: 5px 10px;
+
+  box-sizing: unset; /* animation lags with border-box */
 }
 
 .modal--filter {
   & label {
     padding: 11px;
     cursor: pointer;
-    padding-left: 23px;
+    padding-left: 15px;
   }
   & input {
     position: absolute;
     align-self: center;
   }
-}
-@keyframes popup {
-  0% {
-    height: 0;
+  & li:last-child {
+    margin-bottom: 10px;
   }
+}
 
-  100% {
-    opacity: 1;
-    height: 12px;
-  }
-}
 .filter--icon {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  border: 1px solid transparent;
   &:hover {
-    background: #e5e5e5 !important;
     cursor: pointer;
     & svg {
-      opacity: 0.5;
+      opacity: 0.4;
       cursor: pointer;
     }
   }
   & svg {
-    opacity: 0.4;
+    opacity: 0.3;
     margin-right: 7px;
+    // font-size: 15px;
   }
 }
