@@ -20,7 +20,7 @@ $border-radius: 5px;
   margin: 0;
   background-color: $white;
   border-bottom: 1px solid #ebedf2;
-  min-height: 60px;
+  min-height: 69px;
   border-top-right-radius: $border-radius;
   border-top-left-radius: $border-radius;
 
@@ -37,9 +37,7 @@ $border-radius: 5px;
   &__filter {
     // align-items: center; should not be used, it breaks dropdown and animation
     justify-content: center;
-    padding-top: 20px;
     display: inline-flex;
-    padding-left: 10px;
     &:hover {
       border: 0;
       border-top-right-radius: $border-radius;
@@ -166,7 +164,6 @@ button.pageCountPagination:hover {
 .checkbox--styled {
   display: inline-block;
   position: relative;
-  margin-bottom: 10px;
   text-align: left;
   cursor: pointer;
   font-size: 1rem;
@@ -222,9 +219,5 @@ button.pageCountPagination:hover {
       }
     }
   }
-}
-// custom checkboxs for filter needs top margin
-.table--grid--head__filter .checkbox--styled span {
-  margin-top: 15px;
 }
 //custom checkbox end

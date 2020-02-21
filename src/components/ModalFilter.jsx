@@ -18,12 +18,14 @@ export default function Modal() {
         <div className="modal--filter">
           {tableData.headers.map((item, i) => (
             <li>
-              <label class="checkbox--styled">
-                <input id={i} type="checkbox" />
-                <span></span>
+              <label for={i}>
+                <label class="checkbox--styled">
+                  <input id={i} type="checkbox" />
+                  <span></span>
+                </label>
+                {item}
               </label>
-              <label for={i}>{item}</label>
-              <pan></pan>
+              <span></span>
             </li>
           ))}
         </div>
