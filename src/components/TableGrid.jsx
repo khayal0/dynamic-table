@@ -31,7 +31,9 @@ export default function FlexTable(props) {
           ))}
           {data.map(items =>
             items.map((item, i) => (
-              <span className={"span__" + (i + 1)}>{item}</span>
+              <React.Fragment>
+                <span className={"span__" + (i + 1)}>{item}</span>
+              </React.Fragment>
             ))
           )}
           {/* <div className="pagination">
