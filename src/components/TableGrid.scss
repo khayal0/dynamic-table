@@ -80,11 +80,24 @@ $border-radius: 5px;
     font-weight: 500;
     transition: all 0.3s, border 0s;
   }
+  // remove border of last row
+  & span:nth-last-child(-n + #{$column-size}) {
+    border: none;
+  }
 
   // links style
   & a {
     color: #62bfff;
     text-decoration: none;
+  }
+
+  & span.span__1 {
+    color: #62bfff;
+    font-weight: 400;
+    font-size: 13px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 // headers's style of grid table end

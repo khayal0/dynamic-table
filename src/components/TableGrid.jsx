@@ -29,7 +29,11 @@ export default function FlexTable(props) {
           {headers.map(item => (
             <span>{item}</span>
           ))}
-          {data.map(items => items.map(item => <span>{item}</span>))}
+          {data.map(items =>
+            items.map((item, i) => (
+              <span className={"span__" + (i + 1)}>{item}</span>
+            ))
+          )}
           {/* <div className="pagination">
           <button className="pageChangePagination">&lt;</button>
           <button className="pageCountPagination">1</button>
