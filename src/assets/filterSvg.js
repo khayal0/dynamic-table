@@ -4,7 +4,7 @@ export const filterSvg = (
   <svg
     viewBox="64 64 896 896"
     focusable="false"
-    class=""
+    className=""
     data-icon="filter"
     width="1em"
     height="1em"

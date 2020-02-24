@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../components/Checkbox.scss";
 
-export default function Checkbox({ id, labelName }) {
+export default function Checkbox({ id, labelName, checked }) {
+  useEffect(() => {
+    console.log(checked);
+    return () => {};
+  }, [checked]);
   return (
     <React.Fragment>
-      <label for={id}>
-        <label class="checkbox--styled">
-          <input id={id} type="checkbox" />
+      <label htmlFor={id}>
+        <label className="checkbox--styled">
+          <input id={id} type="checkbox" checked={checked} />
           <span></span>
         </label>
         {labelName}

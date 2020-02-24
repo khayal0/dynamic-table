@@ -1,19 +1,25 @@
 import React, { useState } from "react";
 import "../components/TableGrid.scss";
 import ModalFilter from "./ModalFilter";
-import { tableData } from "../utils/fakeData";
-
-// Grid Table features :
-// show how much rows to display - pass quantity=true, default is true
-// possible future features:
-// search inside table
-// go to page
-// select quantity of rows
-// sorting by column
-
-const { headers, data } = tableData;
+import { tableSample } from "../utils/fakeData";
+import Checkbox from "./Checkbox";
+const uuidv4 = require("uuid/v4");
 
 export default function FlexTable(props) {
+  const initialStateHeaders = tableSample.headers.map((header, i) => ({
+    header,
+    id: i,
+    show: true
+  }));
+  const initialStateData = tableSample.data.map((data, i) => ({
+    data,
+    id: i,
+    show: true
+  }));
+
+  const [headers, setHeaders] = useState(initialStateHeaders);
+  const [datas, setDatas] = useState(initialStateData);
+
   return (
     <div className="table--grid--container">
       <div className="table--grid--head">
@@ -21,33 +27,54 @@ export default function FlexTable(props) {
           <span>Customer Reports</span>
         </div>
         <div className="table--grid--head__filter">
-          <ModalFilter />
+          <ModalFilter
+            setHeaders={setHeaders}
+            setData={setDatas}
+            datas={datas}
+            headers={headers}
+          />
         </div>
       </div>
       <div className="table--grid--body">
         <div className="table--grid">
-          {headers.map(item => (
-            <span>{item}</span>
-          ))}
-          {data.map(items =>
-            items.map((item, i) => (
-              <React.Fragment>
-                <span className={"span__" + (i + 1)}>{item}</span>
-              </React.Fragment>
-            ))
+          {headers.map(item =>
+            item.show ? <span key={item.id}>{item.header}</span> : null
           )}
-          {/* <div className="pagination">
-          <button className="pageChangePagination">&lt;</button>
-          <button className="pageCountPagination">1</button>
-          <button className="pageCountPagination">2</button>
-          <button className="pageCountPagination">3</button>
-          <button className="pageChangePagination">&gt;</button>
-        </div> */}
+          {tableSample.data.map(items =>
+            items.map((item, i) => {
+              return (
+                <React.Fragment key={i}>
+                  {i === 0 ? (
+                    <React.Fragment>
+                      <span className="span__1">
+                        <Checkbox />
+                      </span>
+                      <span className={`span__${i + 1}`}>{item}</span>
+                    </React.Fragment>
+                  ) : i === 7 ? (
+                    <span>
+                      <span className={`button--status__${item}`.toLowerCase()}>
+                        {item}
+                      </span>
+                    </span>
+                  ) : (
+                    <span className={`span__${i + 1}`}>{item}</span>
+                  )}
+                </React.Fragment>
+              );
+            })
+          )}
         </div>
       </div>
+      {/* 
+        This lines need improvement
+        <div className="pagination">
+        <button className="pageChangePagination">&lt;</button>
+        <button className="pageCountPagination">1</button>
+        <button className="pageCountPagination">2</button>
+        <button className="pageCountPagination">3</button>
+        <button className="pageChangePagination">&gt;</button>
+      </div> */}
     </div>
   );
 }
-/* <span
-className={`.button--status__${item.status.toUpperCase()}`}
-></span> */

@@ -14,7 +14,7 @@
     opacity: 0.3;
   }
   to {
-    max-height: 50px;
+    max-height: 43px;
     opacity: 1;
   }
 }
@@ -45,9 +45,14 @@
     margin-bottom: 10px;
   }
 
+  // makes whole li and checkbox clickable
   & li > label {
     display: block;
     width: 100%;
+  }
+  // size is dynamic and appear too narrow on resized windows, to fix this:
+  & li:first-child {
+    margin-right: 100px;
   }
 }
 

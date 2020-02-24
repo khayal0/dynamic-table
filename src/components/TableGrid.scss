@@ -1,8 +1,9 @@
-$column-size: 8;
+$column-size: 9;
 $cyan: #1890ff;
 $light-gray: #d9d9d9;
 $white: #ffffff;
 $border-radius: 5px;
+$button-status-size: 12px !important;
 
 .table--grid--container {
   font-family: Poppins, Helvetica, sans-serif;
@@ -33,7 +34,7 @@ $border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
     color: #48465b;
-    padding-left: 25px;
+    padding-left: 30px;
   }
   &__filter {
     // align-items: center; should not be used, it breaks dropdown and animation
@@ -76,14 +77,14 @@ $border-radius: 5px;
   & span:nth-child(-n + #{$column-size}) {
     color: #74788d;
     font-size: 14px;
-    padding-left: 15px;
     border: none;
-    font-weight: 500;
+    font-weight: 400;
     transition: all 0.3s, border 0s;
   }
   // remove border of last row
   & span:nth-last-child(-n + #{$column-size}) {
     border: none;
+    padding-bottom: 2;
   }
 
   // links style
@@ -140,36 +141,30 @@ button.pageCountPagination:hover {
 //status buttons
 .button--status {
   &__rejected,
-  &__accepted,
+  &__success,
   &__waiting {
-    border-radius: 4px;
-    font-size: 12px;
-    padding: 10px 7px;
+    color: red;
   }
 
   &__rejected {
-    color: #fa541c;
-    background: #fff2e8;
+    background: #ffefe3;
     border: 1px solid #ffbb96;
-    &:after {
-      content: "Rejected";
-    }
+    padding: 4px;
+    border-radius: 3px;
+    font-size: $button-status-size;
   }
-  &__accepted {
-    color: #52c41a;
-    background: #f6ffed;
+  &__success {
+    color: #85e754;
+    background: #edffdb;
     border: 1px solid #b7eb8f;
-    &:after {
-      content: "Accepted";
-    }
+    padding: 4px;
+    border-radius: 3px;
+    font-size: $button-status-size;
   }
   &__waiting {
-    color: rgb(204, 184, 4);
-    background: rgba(253, 255, 219, 0.459);
-    border: 1px solid rgb(247, 226, 107);
-    padding: 10px;
-    &:after {
-      content: "Waiting";
-    }
+    background: rgb(253, 255, 215);
+    padding: 4px;
+    border-radius: 3px;
+    font-size: $button-status-size;
   }
 }

@@ -1,6 +1,7 @@
-export const tableData = {
+export const tableSample = {
   headers: [
-    "Name",
+    "#",
+    "Company Name",
     "Updated",
     " Company Id",
     "Created by",
@@ -11,37 +12,37 @@ export const tableData = {
   ],
   data: [
     [
-      "XIRDALAN İİT 2014 MMC",
+      "XIRDALAN IIT 2014 MMC",
       "23",
       "@testing",
       "fooBar",
       "23",
       "align row and column width and height test test test test",
       "@fooBar",
-      "waiting"
+      "Waiting"
     ],
     [
-      "XIRDALAN İİT 2014 MMC",
+      "BAKU ENGINEERING UNIVERCITY",
       "23",
       "@testing",
       "fooBar",
       "23",
-      "align row and column width and height test test test test",
+      "align",
       "@fooBar",
-      "waiting"
+      "Waiting"
     ],
     [
-      "XIRDALAN İİT 2014 MMC",
+      "XIRDALAN IIT 2014 MMC",
       "23",
       "@testing",
       "fooBar",
       "23",
       "align ",
       "@fooBar",
-      "rejected"
+      "Rejected"
     ],
     [
-      "XIRDALAN İİT 2014 MMC",
+      "XIRDALAN IIT 2014 MMC",
       "23",
       "@testing",
       "fooBar",
@@ -51,14 +52,14 @@ export const tableData = {
       ""
     ],
     [
-      "XIRDALAN İİT 2014 MMC",
+      "XIRDALAN IIT 2014 MMC",
       "23",
       "@testing",
       "fooBar",
       "23",
       "align ",
       "@fooBar",
-      "success"
+      "Success"
     ]
   ]
 };
