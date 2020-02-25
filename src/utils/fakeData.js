@@ -1,6 +1,5 @@
 export const tableSample = {
   headers: [
-    "#",
     "Company Name",
     "Updated",
     " Company Id",
